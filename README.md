@@ -61,10 +61,20 @@ Versão do SpringBoot 2.7.3
 
 - verificar no pom.xm a existencia do plugin:
 
-    <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-    </plugin>
+  	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version><!--$NO-MVN-MAN-VER$ -->
+			</plugin>
+
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 
 Copiar as seguites classes para o pakage config:
