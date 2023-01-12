@@ -23,6 +23,9 @@ import java.util.Arrays;
 @EnableResourceServer
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
+
+    @Value("${cors.origins}")
+    private String corsOrigins;
     @Autowired
     private Environment env;
 

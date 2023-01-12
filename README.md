@@ -1,5 +1,8 @@
 Sequencia para implementar Segurança :
 
+"""Observação"""
+Versão do SpringBoot 2.7.3
+
 - Incluir entidades User e Role
 
 - Copiar as Excessões de Resources em : resources.exceptions
@@ -19,8 +22,8 @@ Sequencia para implementar Segurança :
 
     ```
     <properties>
-    <java.version>11</java.version>
-    <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+    <java.version>17</java.version>
+    <spring-cloud.version>2021.0.3</spring-cloud.version>
     </properties>
 
     ```
@@ -56,11 +59,21 @@ Sequencia para implementar Segurança :
     </dependencyManagement>
     ```
 
-- copiar as seguites classes para o pakage config:
+- verificar no pom.xm a existencia do plugin:
 
-- copiar o JWToken para o pakage components
+    <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+    </plugin>
 
-- inserir métodos do UserDetails na entidade User implements
+
+Copiar as seguites classes para o pakage config:
+
+- copiar a classe JwtTokenEnhancer para o pakage components;
+- copiar as classes do pakage config para o mesmo pakege;
+
+
+Inserir métodos do UserDetails na entidade User implements:
 
     ```
 
