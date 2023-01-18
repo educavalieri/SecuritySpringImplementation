@@ -78,10 +78,10 @@ referência no link: https://github.com/devsuperior/spring-boot-oauth
 	</build>
 
 
-Copiar as seguites classes para o pakage config:
+Copiar as seguites classes para o package config:
 
-- copiar a classe JwtTokenEnhancer para o pakage components;
-- copiar as classes do pakage config para o mesmo pakege;
+- copiar a classe JwtTokenEnhancer para o package components;
+- copiar as classes do package config para o mesmo package;
 
 
 Inserir métodos do UserDetails na entidade User implements:
@@ -178,10 +178,14 @@ Inserir métodos do UserDetails na entidade User implements:
     }
 
     ```
+- 
+- Incluir no UserRepository o código:
 
-- Incluir no pakege services o AuthService
+	User findByEmail(String email);
 
-- alterar application.properties em resouce
+- Incluir no package services o AuthService
+
+- alterar application.properties em resource:
 
     ```
     spring.profiles.active=${APP_PROFILE:test}
